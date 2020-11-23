@@ -3,6 +3,9 @@ name: Test CI|CD
 on:
   push:
     branches: [master]
+    
+    schedule:
+   - cron: "*/5 * * * *"
 jobs:
   build:
     runs-on: self-hosted
