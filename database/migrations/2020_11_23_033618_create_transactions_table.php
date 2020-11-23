@@ -16,8 +16,8 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('garage_id');
-            $table->time('start_time');
-            $table->time('end_time');
+            $table->timestamp('start_time');
+            $table->timestamp('end_time');
             $table->string('total');
             $table->unsignedInteger('car_in_by_user_id');
             $table->unsignedInteger('car_out_by_user_id');

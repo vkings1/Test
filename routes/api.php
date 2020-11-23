@@ -3,6 +3,7 @@
 use App\Http\Controllers\AttendantController;
 use App\Http\Controllers\GarageController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,3 +19,6 @@ Route::post('/add-attendant', [AttendantController::class, 'addAttendant']);
 Route::post('/garage', [GarageController::class, 'addGarage']);
 Route::put('/update-garage/{id}', [GarageController::class, 'addGarageUpdate']);
 Route::delete('/delete-garage/{id}', [GarageController::class, 'addGarageDelete']);
+
+Route::get('/transactions-start-time', [TransactionsController::class, 'getTransactionByStartTime']);
+Route::get('/transactions-end-time', [TransactionsController::class, 'getTransactionbyEndTime']);
