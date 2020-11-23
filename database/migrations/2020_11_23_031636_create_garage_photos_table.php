@@ -19,7 +19,7 @@ class CreateGaragePhotosTable extends Migration
             $table->string('width');
             $table->string('height');
             $table->string('extension');
-            $table->unsignedBigInteger('garage_id');
+            $table->unsignedInteger('garage_id');
             $table->timestamps();
             $table->softDeletes();
         });

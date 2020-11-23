@@ -22,7 +22,7 @@ class CreateGarageRatesTable extends Migration
             $table->string('rate');
             $table->string('status');
             $table->string('succeeding_rate');
-            $table->unsignedBigInteger('garage_id');
+            $table->unsignedInteger('garage_id');
             $table->timestamps('');
             $table->softDeletes();
         });

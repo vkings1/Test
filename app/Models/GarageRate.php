@@ -9,4 +9,9 @@ class GarageRate extends Model
 {
     protected $guarded = [];
     use HasFactory;
+
+    public function Garage()
+    {
+        return $this->hasMany(Garage::class);
+    }
 }
