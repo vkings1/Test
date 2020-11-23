@@ -18,7 +18,7 @@ class CreateGaragesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('address');
-            $table->string('atatus');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

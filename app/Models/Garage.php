@@ -4,12 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Garage extends Model
 {
-    protected $guarded = [];
+
     use HasFactory;
+    protected $guarded = [];
+    use SoftDeletes;
 
     public function GaragePhoto()
     {

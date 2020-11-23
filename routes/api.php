@@ -15,4 +15,6 @@ Route::prefix('/user')->group(function () {
 
 Route::post('/add-attendant', [AttendantController::class, 'addAttendant']);
 
-Route::get('/garage', [GarageController::class, 'index']);
+Route::post('/garage', [GarageController::class, 'addGarage']);
+Route::put('/update-garage/{id}', [GarageController::class, 'addGarageUpdate']);
+Route::delete('/delete-garage/{id}', [GarageController::class, 'addGarageDelete']);
