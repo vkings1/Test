@@ -16,8 +16,8 @@ class CreateGarageRatesTable extends Migration
         Schema::create('garage_rates', function (Blueprint $table) {
             $table->id();
             $table->string('day');
-            $table->time('opening_time');
-            $table->time('closing_time');
+            $table->timestamp('opening_time');
+            $table->timestamp('closing_time');
             $table->string('type');
             $table->string('rate');
             $table->string('status');
