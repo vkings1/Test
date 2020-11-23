@@ -22,6 +22,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'access_leve',
+        'profile_picture',
+        'garage_id'
+
     ];
 
     /**
@@ -44,6 +48,6 @@ class User extends Authenticatable
     ];
     public function Garage()
     {
-        return $this->hasMany(Garage::class);
+        // return $this->hasMany(Garage::class);
     }
 }
