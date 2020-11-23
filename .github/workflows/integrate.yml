@@ -3,7 +3,7 @@ name: Test CI|CD
 on:
   push:
     branches: [master]
-    
+
     schedule:
    - cron: "*/5 * * * *"
 jobs:
@@ -12,7 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm i
-      - run: npm run build --if-present
+        - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        - name: Install Dependencies
+          run: composer install
+           - name: Generate key
+           run: php artisan key:generate           
+
+
+
+
